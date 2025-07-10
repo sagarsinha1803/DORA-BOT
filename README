@@ -1,0 +1,147 @@
+# DORA BOT
+
+DORA BOT is a cross-platform chat application project consisting of a Flutter client and a Python server. The project is organized into two main components:
+
+- **CLIENT**: A Flutter application supporting Android, iOS, Web, Windows, macOS, and Linux.
+- **SERVER**: A Python backend built with **FastAPI**, providing authentication, database, and chat logic.
+
+---
+
+## Features
+
+- Real-time chat across platforms
+- Chat with tool calling features:
+  - **Tavily Search** for fetching live news
+  - **Current Time** retrieval
+- Modern, responsive Flutter UI
+- FastAPI server for robust backend logic
+- Clean FastAPI architecture for maintainable and scalable backend code
+
+
+---
+
+## Project Structure
+
+```
+CLIENT/
+  dora_client/         # Flutter app source code
+    lib/               # Dart source files
+    test/              # Unit and widget tests
+    android/           # Android platform code
+    ios/               # iOS platform code
+    linux/             # Linux platform code
+    macos/             # macOS platform code
+    windows/           # Windows platform code
+    web/               # Web platform code
+    pubspec.yaml       # Flutter dependencies and metadata
+    README.md          # Flutter client readme
+SERVER/
+  src/                 # Python server source code
+  model/               # Database models
+  dora_chat.db         # SQLite database
+  requirement.txt      # Python dependencies
+  .env                 # Environment variables
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [Flutter SDK](https://docs.flutter.dev/get-started/install)
+- [Python 3.11+](https://www.python.org/downloads/)
+- [pip](https://pip.pypa.io/en/stable/installation/)
+
+### Setup
+
+#### 1. Clone the repository
+
+```sh
+git clone <your-repo-url>
+cd DORA\ BOT
+```
+
+#### 2. Install Server Dependencies
+
+```sh
+cd SERVER
+pip install -r requirement.txt
+```
+
+#### 3. Install Client Dependencies
+
+```sh
+cd ../CLIENT/dora_client
+flutter pub get
+```
+
+---
+
+## Running the Project
+
+### Start the Server
+
+```sh
+cd SERVER
+python src/main.py
+```
+
+The server is built with **FastAPI**.
+
+### Run the Flutter Client
+
+From `CLIENT/dora_client`:
+
+- **Mobile/Web/Desktop**:  
+  ```sh
+  flutter run
+  ```
+- **Web**:  
+  ```sh
+  flutter run -d chrome
+  ```
+- **Windows**:  
+  ```sh
+  flutter run -d windows
+  ```
+- **macOS**:  
+  ```sh
+  flutter run -d macos
+  ```
+- **Linux**:  
+  ```sh
+  flutter run -d linux
+  ```
+
+---
+
+## Configuration
+
+- **Server**: Configure environment variables in `SERVER/.env`.
+- **Client**: Update API endpoints in Dart code as needed.
+
+---
+
+## Testing
+
+- **Server**:  
+  Add and run Python tests as needed.
+- **Client**:  
+  ```sh
+  flutter test
+  ```
+
+---
+
+## License
+
+This project is for educational purposes.
+
+---
+
+## Acknowledgements
+
+- [Flutter](https://flutter.dev/)
+- [Python](https://www.python.org/)
+- [FastAPI](https://fastapi.tiangolo.com/)
